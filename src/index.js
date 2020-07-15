@@ -2,7 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	// your code here
 	document.addEventListener('submit', event => {
 		// prevent page refresh on form submission
+		createNewTask();
 		event.preventDefault();
+	});
+
+	function createNewTask() {
 		let input = document.getElementById("new-task-description").value;
 		let myList = document.getElementsByTagName('ul')[0]
 		const listItem = document.createElement("li");
@@ -10,5 +14,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		listItem.appendChild(listValue);
 		myList.appendChild(listItem);
 		event.target.reset()
-	});
+	}
 });
