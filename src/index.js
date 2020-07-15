@@ -6,13 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		event.preventDefault();
 	});
 
+	document.addEventListener('click',function(e){
+		removeTask(e);
+	});
+
 	function createNewTask() {
 		let input = document.getElementById("new-task-description").value;
 		let myList = document.getElementsByTagName('ul')[0]
-		const listItem = document.createElement("li");
-		const listValue = document.createTextNode(input);
-		listItem.appendChild(listValue);
-		myList.appendChild(listItem);
+		myList.innerHTML += '<li>' + input + ' <button onclick="">&#88;</button> </li>';
 		event.target.reset()
+	}
+
+	function removeTask(e) {
+		if (e.target.tagName == "BUTTON") {
+			e.target.parentElement.remove();}
 	}
 });
