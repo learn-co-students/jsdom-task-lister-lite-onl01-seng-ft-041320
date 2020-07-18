@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    function removeTaskButton(e) {
      if ( e.target.tagName == "BUTTON" ) {
-       let li = e.target.parentElement;
-       li.parentElement.removeChild(li)
+       e.target.parentElement.remove();
      }
 
    }
