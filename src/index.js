@@ -1,8 +1,20 @@
-const taskDesc = document.getElementById("new-task-description").value
-const submitTask = document.get
+//variables
+let taskDesc = document.getElementById("new-task-description")
+let taskForm = document.getElementById("create-task-form")
+let ul = document.getElementById("tasks")
+newLi = document.createElement("li")
+//function
+function addTask(){
+  newTaskNode = document.createTextNode(taskDesc.value)
+  newLi.appendChild(newTaskNode)
+  ul.append(newLi)
+};
 
+
+//eventlistener
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
+  event.preventDefault();
 });
 
 
