@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (ul){
     ul.addEventListener("click", (e) =>{
       if (e.target.nodeName === "BUTTON") {
-       console.log(e.target.dataset.description);
+       alert("welcome");
       }
     });
     };
