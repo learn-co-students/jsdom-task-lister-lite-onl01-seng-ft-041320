@@ -1,14 +1,14 @@
-const taskInput = document.getElementById('new-task-description').value
-cosnt todoListElement = document.getElementById('tasks')
-
+const taskInput = document.getElementById('new-task-description');
+const todoListElement = document.getElementById('tasks');
+const form = document.getElementById('create-task-form')
 function addComment(){
 
   newLi = document.createElement('li');
-  newTaskNode = document.createTextNode(taskInput)
-  newLi.appendChild(newTaskNode)
-  todoListElement.appendChild(newLi)
+  newTaskNode = document.createTextNode(taskInput.value);
+  newLi.appendChild(newTaskNode);
+  todoListElement.appendChild(newLi);
 
-};
+}
 
 
 
@@ -16,10 +16,9 @@ function addComment(){
 
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
-  const submitElement = document.getElementById("submit");
-  submitElement.addEventListener("submit", function() {
+  form.addEventListener("submit", function() {
     event.preventDefault();
-    addComment()
+    addComment();
    
   });
 
@@ -27,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Deliverables:
-// As a user, I should be able to type a task into the input field.
-// As a user, I should be able to click some form of a submit button.
-// As a user, the task string that I provided should appear on the DOM after the submit button has been activated.
+// As a user, I should be able to type a task into the input field. x
+// As a user, I should be able to click some form of a submit button. x
+// As a user, the task string that I provided should appear on the DOM after the submit button has been activated. x
 // Note: While the example shows one working application of TaskLister Lite™️, yours can (and is encouraged to!) look however you like.
 
-// Squelch a Default Action with Event.preventDefault
+// Squelch a Default Action with Event.preventDefault x
 
 // Stretch Deliverables:
 
